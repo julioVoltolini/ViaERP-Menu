@@ -1,12 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tab-label',
   templateUrl: './tab-label.component.html',
   styleUrls: ['./tab-label.component.scss'],
 })
-export class TabLabelComponent {
+export class TabLabelComponent implements OnInit {
+  @Input()
+  label!: string;
+  @Input()
+  index!: number;
 
-  @Input() label: string | undefined;
-  @Input() index: number = -1;
+  ngOnInit(): void {
+    if (this.label == (null || undefined) || this.label.length == 0) {
+      throw new Error('Deve informar o label da tab.');
+    } else if (this.index == (null || undefined) || this.index <= 0) {
+      throw new Error('Deve informar o index da tab.');
+    }
+  }
 }
