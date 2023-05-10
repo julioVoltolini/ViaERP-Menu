@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+#main-div {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+#main-content {
+  flex-grow: 1;
+  flex-basis: auto;
+  background-color: white;
+}
+
+#main-footer {
+  flex-grow: 0;
+  height: 20px;
+  background-color: indianred;
+}

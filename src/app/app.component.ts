@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ViaERP-Menu';
+  usuario: string = "Júlio Cezar";
+  empresa: string = "ELIAS MATERIAIS PARA CONSTRUÇÃO"
 }
